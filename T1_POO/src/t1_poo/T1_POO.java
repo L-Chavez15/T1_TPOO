@@ -15,7 +15,7 @@ public class T1_POO {
      */
     public static void main(String[] args) 
     {
-        System.out.println("hola");
+        
     }
     
 }
