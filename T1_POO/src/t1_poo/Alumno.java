@@ -38,32 +38,30 @@ public class Alumno
 
     public Boolean setNumero_documento(String numero_documento) 
     {
-        if(this.tipo_documento.equalsIgnoreCase("DNI"))
+        if(this.tipo_documento.equals("DNI"))
         {
-            if(numero_documento.length() == 8)
-            {
-                this.numero_documento = numero_documento;
-                return true;
-            }
-            else
-            {
-                throw new IllegalArgumentException(
-                        "EL DNI DEBE TENER 8 DIGITOS");
-            }
+        if(numero_documento.length() == 8)
+        {
+            this.numero_documento = numero_documento;
+            return true;
+        }
+        else
+        {
+            System.out.println("EL DNI DEBE TENER 8 DIGITOS");
+        }
         }
 
-        if(this.tipo_documento.equalsIgnoreCase("RESIDENCIA TEMPORAL"))
+        if(this.tipo_documento.equals("RESIDENCIA TEMPORAL"))
         {
-            if(numero_documento.length() == 11)
-            {
-                this.numero_documento = numero_documento;
-                return true;
-            }
-            else
-            {
-                throw new IllegalArgumentException(
-                        "EL DOCUMENTO DEBE TENER 11 DIGITOS");
-            }
+        if(numero_documento.length() == 11)
+        {
+            this.numero_documento = numero_documento;
+            return true;
+        }
+        else
+        {
+            System.out.println("EL DOCUMENTO DEBE TENER 11 DIGITOS");
+        }
         }
 
         return false;
@@ -82,7 +80,7 @@ public class Alumno
         }
         else
         {
-            throw new IllegalArgumentException("NIVEL SOCIOECONOMICO INVALIDO");
+            System.out.println("ERROR, NIVEL SOCIOECONOMICO INVALIDO");
         }
     }
 
@@ -94,12 +92,6 @@ public class Alumno
         this.tipo_beca = tipo_beca;
     }
 
-    
-    
-    
-    
-    
-    
    public void VerDato()
    {
        System.out.println("NOMBRE: "+this.nombre+ " Tipo de documento: "+this.tipo_documento+" Nivel socioeconomico: "+this.Nivel_socie+" Tipo de BECA: "+this.tipo_beca);

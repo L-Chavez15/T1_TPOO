@@ -44,7 +44,11 @@ public class T1_POO {
             
             System.out.println("INGRESE NIVEL SOCIOECONOMICO: ");
             String Nivel_soci =sc.nextLine();
-            p.setNivel_socie(Nivel_soci);
+            while(p.setNumero_documento(NroDoc) == false)
+            {
+            System.out.println("INGRESE NUMERO DE DOCUMENTO NUEVAMENTE: ");
+            NroDoc = sc.nextLine();
+            }   
             
             System.out.println("INGRESE TIPO DE BECA: ");
             String Nivel_BECA =sc.nextLine();
