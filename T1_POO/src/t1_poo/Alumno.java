@@ -60,7 +60,16 @@ public class Alumno
     }
 
     public void setNivel_socie(String Nivel_socie) {
-        this.Nivel_socie = Nivel_socie;
+        if(Nivel_socie.equalsIgnoreCase("A") ||
+           Nivel_socie.equalsIgnoreCase("B") ||
+           Nivel_socie.equalsIgnoreCase("C"))
+        {
+            this.Nivel_socie = Nivel_socie;
+        }
+        else
+        {
+            throw new IllegalArgumentException("NIVEL SOCIOECONOMICO INVALIDO");
+        }
     }
 
     public String getTipo_beca() {
