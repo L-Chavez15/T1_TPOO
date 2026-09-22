@@ -4,10 +4,28 @@
  */
 package t1_poo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author leoch
  */
-public class AlumnoCollector {
+public class AlumnoCollector 
+{
+    ArrayList<Alumno> lista_alumno= new ArrayList<>();
+    void agregar_Alumno(Alumno nuevaAlumno)
+    {
+        System.out.println("SE AGREGO PERSONA");
+        lista_alumno.add(nuevaAlumno);
+    }
     
+    void lista_Alumno()
+    {
+        System.out.println("*******PERSONAS REGISTRADAS*******");
+        Alumno  actual;
+        for (int i = 0; i < lista_alumno.size(); i++) {
+            actual=lista_alumno.get(i);
+            actual.VerDato();
+        }
+    }
 }
