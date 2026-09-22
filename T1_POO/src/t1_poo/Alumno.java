@@ -38,21 +38,35 @@ public class Alumno
 
     public Boolean setNumero_documento(String numero_documento) 
     {
-        if(numero_documento.length()==8)
+        if(this.tipo_documento.equalsIgnoreCase("DNI"))
         {
-            this.numero_documento=numero_documento;
-            return true;
+            if(numero_documento.length() == 8)
+            {
+                this.numero_documento = numero_documento;
+                return true;
+            }
+            else
+            {
+                throw new IllegalArgumentException(
+                        "EL DNI DEBE TENER 8 DIGITOS");
+            }
         }
-        if(numero_documento.length()==11)
+
+        if(this.tipo_documento.equalsIgnoreCase("RESIDENCIA TEMPORAL"))
         {
-            this.numero_documento=numero_documento;
-            return true;
+            if(numero_documento.length() == 11)
+            {
+                this.numero_documento = numero_documento;
+                return true;
+            }
+            else
+            {
+                throw new IllegalArgumentException(
+                        "EL DOCUMENTO DEBE TENER 11 DIGITOS");
+            }
         }
-        else
-        {
-            System.out.println("ERROR, INGRESE UNA CANTIDAD VALIDA");
-            return false;
-        }
+
+        return false;
     }
 
     public String getNivel_socie() {
