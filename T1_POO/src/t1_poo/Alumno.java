@@ -47,7 +47,7 @@ public class Alumno
         }
         else
         {
-            System.out.println("EL DNI DEBE TENER 8 DIGITOS");
+            System.out.println("EL DNI DEBE TENER 8 DIGITOS.");
         }
         }
 
