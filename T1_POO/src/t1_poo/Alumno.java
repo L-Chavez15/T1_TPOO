@@ -11,6 +11,7 @@ package t1_poo;
 public class Alumno 
 {
     private String nombre;
+    private String tipo_documento;
     private String numero_documento;
     private String Nivel_socie;
     private String tipo_beca;
@@ -23,12 +24,35 @@ public class Alumno
         this.nombre = nombre;
     }
 
+    public String getTipo_documento() {
+        return tipo_documento;
+    }
+
+    public void setTipo_documento(String tipo_documento) {
+        this.tipo_documento = tipo_documento;
+    }
+
     public String getNumero_documento() {
         return numero_documento;
     }
 
-    public void setNumero_documento(String numero_documento) {
-        this.numero_documento = numero_documento;
+    public Boolean setNumero_documento(String numero_documento) 
+    {
+        if(numero_documento.length()==8)
+        {
+            this.numero_documento=numero_documento;
+            return true;
+        }
+        if(numero_documento.length()==11)
+        {
+            this.numero_documento=numero_documento;
+            return true;
+        }
+        else
+        {
+            System.out.println("ERROR, INGRESE UNA CANTIDAD VALIDA");
+            return false;
+        }
     }
 
     public String getNivel_socie() {
@@ -46,6 +70,8 @@ public class Alumno
     public void setTipo_beca(String tipo_beca) {
         this.tipo_beca = tipo_beca;
     }
+
+    
     
     
     
@@ -53,6 +79,6 @@ public class Alumno
     
    public void VerDato()
    {
-       
+       System.out.println("NOMBRE: "+this.nombre+ " Tipo de documento: "+this.tipo_documento+" Nivel socioeconomico: "+this.Nivel_socie+" Tipo de BECA: "+this.tipo_beca);
    }
 }
