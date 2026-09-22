@@ -37,8 +37,37 @@ public class T1_POO {
             String TipoDoc=sc.nextLine();
             p.setTipo_documento(TipoDoc);
             
-            System.out.println("INGRESE NUMERO DE DOCUMENTO: ");
-            String NroDoc =sc.nextLine();
+            
+            String NroDoc = "";
+
+            while (true)
+            {
+                System.out.println("INGRESE NUMERO DE DOCUMENTO: ");
+                NroDoc = sc.nextLine();
+
+                if (TipoDoc.equalsIgnoreCase("DNI"))
+                {
+                    if (NroDoc.length() == 8)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        System.out.println("ERROR: EL DNI DEBE TENER 8 DIGITOS");
+                    }
+                }
+                else
+                {
+                    if (NroDoc.length() == 11)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        System.out.println("ERROR: EL DOCUMENTO DEBE TENER 11 DIGITOS");
+                    }
+                }
+            }
             p.setNumero_documento(NroDoc);
             
             System.out.println("INGRESE NIVEL SOCIOECONOMICO: ");

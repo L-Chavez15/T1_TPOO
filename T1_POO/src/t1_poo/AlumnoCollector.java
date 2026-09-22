@@ -21,7 +21,7 @@ public class AlumnoCollector
     
     void lista_Alumno()
     {
-        System.out.println("*******PERSONAS REGISTRADAS*******");
+        System.out.println("*******ALUMNOS REGISTRADOS*******");
         Alumno  actual;
         for (int i = 0; i < lista_alumno.size(); i++) {
             actual=lista_alumno.get(i);
